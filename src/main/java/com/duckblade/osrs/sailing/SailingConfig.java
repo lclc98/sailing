@@ -71,9 +71,17 @@ public interface SailingConfig extends Config
 	String SECTION_COURIER_TASKS = "courier";
 
 	@ConfigSection(
+		name = "Salvaging",
+		description = "Settings for shipwreck salvaging.",
+		position = 800,
+		closedByDefault = true
+	)
+	String SECTION_SALVAGING = "salvaging";
+
+	@ConfigSection(
 		name = "Cargo Hold Tracking",
 		description = "Settings for tracking the contents of your cargo hold.",
-		position = 800,
+		position = 900,
 		closedByDefault = true
 	)
 	String SECTION_CARGO_HOLD_TRACKING = "cargoHoldTracking";
@@ -252,6 +260,57 @@ public interface SailingConfig extends Config
 	default boolean courierItemIdentification()
 	{
 		return true;
+	}
+
+	@ConfigItem(
+		keyName = "salvagingHighlight",
+		name = "Highlight Salvage",
+		description = "Shows which ships you can salvage.",
+		section = SECTION_SALVAGING,
+		position = 1
+	)
+	default boolean salvagingHighlight()
+	{
+		return true;
+	}
+
+	@ConfigItem(
+		keyName = "salvagingHighlightColor",
+		name = "Salvage Colour",
+		description = "Colour to highlight ships you can salvage.",
+		section = SECTION_SALVAGING,
+		position = 2
+	)
+	@Alpha
+	default Color salvagingHighlightColor()
+	{
+		return Color.GREEN;
+	}
+
+	@ConfigItem(
+		keyName = "salvagingHighlightSunkColor",
+		name = "Salvage Sunk Colour",
+		description = "Colour to highlight ships that are sunken.",
+		section = SECTION_SALVAGING,
+		position = 3
+	)
+	@Alpha
+	default Color salvagingHighlightSunkColor()
+	{
+		return Color.YELLOW;
+	}
+
+	@ConfigItem(
+		keyName = "salvagingHighlightNotLevelColor",
+		name = "Salvage Unmet Requirement Colour",
+		description = "Colour to highlight ships that you don't have the level for.",
+		section = SECTION_SALVAGING,
+		position = 4
+	)
+	@Alpha
+	default Color salvagingHighlightNotLevelColor()
+	{
+		return Color.RED;
 	}
 
 	@ConfigItem(

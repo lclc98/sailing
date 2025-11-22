@@ -14,6 +14,7 @@ import com.duckblade.osrs.sailing.features.courier.CourierDestinationOverlay;
 import com.duckblade.osrs.sailing.features.crewmates.CrewmateOverheadMuter;
 import com.duckblade.osrs.sailing.features.mes.DeprioSailsOffHelm;
 import com.duckblade.osrs.sailing.features.mes.PrioritizeCargoHold;
+import com.duckblade.osrs.sailing.features.salvage.SalvageHighlighter;
 import com.duckblade.osrs.sailing.features.util.BoatTracker;
 import com.google.common.collect.ImmutableSet;
 import com.google.inject.AbstractModule;
@@ -48,6 +49,7 @@ public class SailingModule extends AbstractModule
 		LuffOverlay luffOverlay,
 		PrioritizeCargoHold prioritizeCargoHold,
 		RapidsOverlay rapidsOverlay,
+		SalvageHighlighter salvageHighlighter,
 		SeaChartOverlay seaChartOverlay,
 		SeaChartPanelOverlay seaChartPanelOverlay,
 		SeaChartTaskIndex seaChartTaskIndex,
@@ -64,6 +66,7 @@ public class SailingModule extends AbstractModule
 			.add(luffOverlay)
 			.add(prioritizeCargoHold)
 			.add(rapidsOverlay)
+			.add(salvageHighlighter)
 			.add(seaChartOverlay)
 			.add(seaChartPanelOverlay)
 			.add(seaChartTaskIndex)
