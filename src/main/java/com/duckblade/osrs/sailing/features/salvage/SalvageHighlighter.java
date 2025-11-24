@@ -58,7 +58,6 @@ public class SalvageHighlighter
 	);
 
 	private final Client client;
-	private final SailingConfig config;
 
 	private final Set<GameObject> salvage = new HashSet<>();
 	private final Set<GameObject> salvageStump = new HashSet<>();
@@ -68,10 +67,9 @@ public class SalvageHighlighter
 	private Color salvageHighlightNotLevelColor;
 
 	@Inject
-	public SalvageHighlighter(Client client, SailingConfig config)
+	public SalvageHighlighter(Client client)
 	{
 		this.client = client;
-		this.config = config;
 
 		setPosition(OverlayPosition.DYNAMIC);
 		setLayer(OverlayLayer.ABOVE_SCENE);
