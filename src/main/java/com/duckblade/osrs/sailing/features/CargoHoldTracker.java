@@ -344,7 +344,7 @@ public class CargoHoldTracker
 		Multiset<Integer> ret = HashMultiset.create();
 		for (Item item : inv.getItems())
 		{
-			if (item == null)
+			if (item == null || item.getId() == UNKNOWN_ITEM)
 			{
 				continue;
 			}
