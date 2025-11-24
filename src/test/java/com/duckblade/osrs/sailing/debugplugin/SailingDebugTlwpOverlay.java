@@ -50,7 +50,7 @@ public class SailingDebugTlwpOverlay
 			Polygon poly = Perspective.getCanvasTilePoly(client, Objects.requireNonNull(LocalPoint.fromWorld(client, tlwp)));
 			if (poly != null)
 			{
-				OverlayUtil.renderPolygon(graphics, poly, Color.cyan);
+				OverlayUtil.renderPolygon(graphics, poly, Color.magenta);
 			}
 		}
 
