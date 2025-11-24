@@ -263,13 +263,13 @@ public interface SailingConfig extends Config
 	}
 
 	@ConfigItem(
-		keyName = "salvagingHighlight",
+		keyName = "salvagingHighlightEnabled",
 		name = "Highlight Salvage",
 		description = "Shows which ships you can salvage.",
 		section = SECTION_SALVAGING,
 		position = 1
 	)
-	default boolean salvagingHighlight()
+	default boolean salvagingHighlightEnabled()
 	{
 		return true;
 	}

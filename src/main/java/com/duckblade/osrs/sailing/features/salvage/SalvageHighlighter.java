@@ -90,7 +90,7 @@ public class SalvageHighlighter
 		salvageHighlightColor = config.salvagingHighlightColor();
 		salvageHighlightSunkColor = config.salvagingHighlightSunkColor();
 		salvageHighlightNotLevelColor = config.salvagingHighlightNotLevelColor();
-		return config.salvagingHighlight();
+		return config.salvagingHighlightEnabled();
 	}
 
 	@Override
@@ -148,7 +148,7 @@ public class SalvageHighlighter
 	@Override
 	public Dimension render(Graphics2D graphics)
 	{
-		if (!SailingUtil.isSailing(client) || !config.salvagingHighlight())
+		if (!SailingUtil.isSailing(client) || !config.salvagingHighlightEnabled())
 		{
 			return null;
 		}
