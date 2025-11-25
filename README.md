@@ -5,28 +5,40 @@
 
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/LlemonDuck)
 
-Take to the sea
+Sailing quality-of-life for charting, navigation, facilities, and more.
 
-### Sea Charting Highlighting
+## Navigation
+- Highlight Rapids: Highlights nearby rapids to help with routing.
 
-Highlights sea charting locations.
-By default, only highlights uncharted locations in green.
-Turn "Highlight Sea Charting Locations" to "All" 
-to also show already-charted locations in yellow.
+![Rapids](docs/rapids.png)
 
-![Sea Charting Highlight Pic](docs/charting.png)
+## Facilities
+- Highlight Trimmable Sails: Highlights your sails when they require trimming.
 
-### Trimmable Sails Highlighting
+![Trimmable Sails](docs/trimmable-sails.png)
 
-Highlights your sails in green when they can be trimmed.
+## Crewmates
+- Mute Overhead Text: Mute crewmate overhead messages.
+  - Modes: `None` (default), `Other boats`, `All`.
 
-![Trimmable Sails Pic](docs/trimmable-sails.png)
+## Menu Entry Swaps
+- Sails At Helm Only: Deprioritizes sail interaction options when you’re not at the helm.
+- Prioritize Cargo Hold: Prioritizes clicking the Cargo Hold over nearby objects to make it easier to open.
 
-### Rapids Highlighting
+## Sea Charting
+- Highlight Sea Charting Locations: Highlights nearby chartable locations.
+  - Modes: `None`, `Requirements met`, `Uncharted` (default), `Charted`, `All`.
+  - Uncharted Colour: Colour used for uncharted locations (default green).
+  - Charted Colour: Colour used for already‑charted locations (default yellow).
+  - Unavailable Colour: Colour for uncharted locations where requirements are not met (default red).
+- Weather Station Solver: Helper for weather charting tasks.
+- Current Duck Solver: Helper overlay for current duck trails.
 
-Highlights nearby rapids.
+![Sea Charting](docs/charting.png)
 
-TODO: Highlight with different colours depending on
-whether your boat can withstand the rapids.
+## Barracuda Trials
+- Highlight Crates: Highlights lost crates to collect during Barracuda Trials.
+  - Crate Colour: Customize the highlight colour (default orange).
 
-![Rapids Pic](docs/rapids.png)
+## Courier Tasks
+- Destination on Items: Shows the destination port directly on cargo crates in your inventory and cargo hold.
