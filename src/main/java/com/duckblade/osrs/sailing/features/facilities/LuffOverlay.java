@@ -60,7 +60,8 @@ public class LuffOverlay
 	@Subscribe
 	public void onChatMessage(ChatMessage e)
 	{
-		if (!SailingUtil.isSailing(client) || e.getType() != ChatMessageType.GAMEMESSAGE)
+		if (!SailingUtil.isSailing(client) ||
+			(e.getType() != ChatMessageType.GAMEMESSAGE && e.getType() != ChatMessageType.SPAM))
 		{
 			return;
 		}
