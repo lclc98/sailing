@@ -363,6 +363,18 @@ public interface SailingConfig extends Config
 	}
 
 	@ConfigItem(
+			keyName = "barracudaHidePortalTransitions",
+			name = "Hide Portal Transitions",
+			description = "Hide the transition animation when taking a portal in The Gwenith Glide.",
+			section = SECTION_BARRACUDA_TRIALS,
+			position = 3
+	)
+	default boolean barracudaHidePortalTransitions()
+	{
+		return false;
+	}
+
+	@ConfigItem(
 		keyName = "courierItemIdentification",
 		name = "Destination on Items",
 		description = "Show the destination port on cargo crates in your inventory and cargo hold.",
